@@ -30,3 +30,14 @@ export interface StudentResult {
 }
 
 export type Phase = 'upload' | 'calibrate' | 'answer_key' | 'processing' | 'results';
+
+export interface AnswerKeyPreset {
+  id: string;
+  title: string;
+  stage: string;
+  questionsCount: number;
+  optionsCount: number;
+  columnsCount: number;
+  correctAnswers: Record<number, string>;
+  createdAt?: string;
+}
